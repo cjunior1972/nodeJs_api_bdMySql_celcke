@@ -7,9 +7,9 @@ const conexao = new Sequelize("celke","root","SQL123",
 );
 
 conexao.authenticate().then(function(){
-    console.log("OK: Conexão com banco de dados realizada com sucesso/!")
+    console.log("OK: Conexão com banco de dados realizada com sucesso!")
 }).catch(function(){
-    console.log("Erro: Não conectado com sucesso!");
+    console.log("Erro: Não conectado com o banco de dados!");
 });
 
 
