@@ -13,8 +13,24 @@ app.get("/",async (req, res) => {
 });
 
 app.post("/cadastrar",async (req, res) => {
-    console.log(req.body);    
-    res.send("Página cadastrar");
+    console.log(req.body);
+    
+    await  User.create(req.body)   
+    .then(() => {
+        //retorno padrão status 200
+        return res.json({
+            erro: false,
+            mensagem: "Usuário cadastrado com sucesso!"
+        });            
+    }).catch(() => { 
+        //retorno padrão status 400
+        return res.status(400).json({
+            erro: true,
+            mensagem: "Erro: Usuário não cadastrado com sucesso!"
+        });         
+    });
+
+    //res.send("Página cadastrar");
 });
 
 app.listen(8080,() =>  {
