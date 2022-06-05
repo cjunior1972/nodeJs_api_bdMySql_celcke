@@ -1,0 +1,30 @@
+PRIMEIRA VEZ
+git init
+git add .
+git status 
+git commit -m "Mensagem explicada"
+git branch -M main
+git remote add origin git@github.com:cjunior1972/nodeJs_api__bdMySql_celcke.git
+git push -u origin main
+
++ ATUALIZAÇÕES
+git add .
+git status 
+git commit -m "Mensagem explicada"
+git status 
+git log --stat   //mostra os que estão marcados no commit para subir
+git push 
+
+
+NOVA BRANCH
+git clean -fd
+​git fetch --all
+​git pull origin develop
+​git log
+​git checkout -b "nome da branch"
+​git branch
+
+
+
+
+
